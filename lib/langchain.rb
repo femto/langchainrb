@@ -83,6 +83,7 @@ module Langchain
     autoload :Base, "langchain/chunker/base"
     autoload :Text, "langchain/chunker/text"
     autoload :RecursiveText, "langchain/chunker/recursive_text"
+    autoload :RecursiveTextSplitter, "langchain/chunker/recursive_text_splitter"
   end
 
   module Tool

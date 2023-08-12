@@ -11,5 +11,6 @@ module Langchain
     # - {Langchain::Chunker::Text}
     class Base
     end
+
   end
 end
