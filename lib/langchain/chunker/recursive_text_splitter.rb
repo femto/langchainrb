@@ -7,6 +7,10 @@ module Langchain
         chunks = []
         i = 0
         while i < text.length
+          if text.length - i < chunk_size
+            chunks << text[i..-1]
+            break
+          end
           chunks << text[i, chunk_size]
           i += chunk_size - chunk_overlap
         end
