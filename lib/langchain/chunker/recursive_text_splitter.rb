@@ -7,8 +7,9 @@ module Langchain
         chunks = []
         i = 0
         while i < text.length
-          if text.length - i < chunk_size
-            chunks << text[i..-1]
+          remaining_length = text.length - i
+          if remaining_length <= chunk_size
+            chunks << text[i, remaining_length]
             break
           end
           chunks << text[i, chunk_size]
